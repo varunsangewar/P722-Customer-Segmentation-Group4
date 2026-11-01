@@ -24,10 +24,13 @@ Retail marketing campaigns currently treat the entire customer base as a homogen
 * **Interpretability & Profiling:** Clusters must represent distinct, logically explainable customer behaviors.
 * **Reproducibility:** Fully reproducible end-to-end code execution using frozen random seeds and clean data pipelines.
 * **Operational Usability:** A functional Streamlit web application capable of classifying single-customer inputs into segments in real time.
+*(Note: Per ExcelR project guidelines, commercial uplift figures are treated as testable hypotheses and must not be fabricated prior to post-deployment experimentation).*
 
 ---
 
 ## 4. Testable Segment Hypotheses (Prior to Clustering)
+These formal hypotheses guide exploratory data analysis (EDA) and will be validated against post-clustering profile data:
+
 * **Hypothesis H1 (Affluent Connoisseurs):** Customers with above-median Income and zero children (`Kidhome + Teenhome == 0`) allocate a significantly higher proportion of spend to `MntWines` and `MntMeatProducts` and exhibit lower deal sensitivity (`NumDealsPurchases`).
 * **Hypothesis H2 (Budget & Deal Seekers):** Customers with lower-to-middle income and larger family sizes (`Kidhome > 0` or `Teenhome > 0`) have lower average basket sizes but generate a higher ratio of purchases via promotions (`NumDealsPurchases`).
 * **Hypothesis H3 (Digital-First Shoppers):** Customers with high web browsing activity (`NumWebVisitsMonth`) and moderate-to-high web purchases (`NumWebPurchases`) represent a distinct digital segment responsive to email promotions (`AcceptedCmp` series).
